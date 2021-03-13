@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const ejs = require('ejs');
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 // motor de plantillas
 app.set("view engine", "ejs");
