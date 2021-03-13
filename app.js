@@ -11,17 +11,16 @@ app.set("views",__dirname + "/views");
 //middleware
 app.use(express.static(__dirname+"/public"));
 
-/** RUTAS */
-app.get("/",(req,res)=>{
-    res.render("home/index",{titulo:"titulo dinamico"});
-});
-
-
+/** RUTAS WEB */
+app.use("/",require("./routers/web"));
+app.use("/mascotas",require("./routers/mascotas"));
 
 /** sino encuentra la ruta, le arrojamos el error 404 */
 app.use((req,res,next)=>{
     res.status(404).sendFile(__dirname+"/public/404.html");
 });
+
+
 app.listen(port,()=>{
     console.log("Servicio a su puerto:"+port);
 });
