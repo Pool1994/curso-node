@@ -5,7 +5,9 @@ router.get("/",async(req,res)=>{
     try{
         const dataMascotas = Mascotas.find();
         const result = await dataMascotas;
-        res.render("mascotas/index",{data:result}); 
+        res.render("mascotas/index",{
+            data:result
+        }); 
     }catch(e){
         console.log(e);
     }

@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
 const ejs = require('ejs');
-const port = process.env.PORT || 8080;
+require("dotenv").config();
+
+const port = process.env.PORT;
 
 require("./src/database/database");
 
