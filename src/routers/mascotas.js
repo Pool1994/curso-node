@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-// const Mascotas = require("../models/Mascotas");
+const Mascotas = require("../models/Mascotas");
 router.get("/",async (req,res)=>{
     try{
         const dataMascotas = Mascotas.find();
