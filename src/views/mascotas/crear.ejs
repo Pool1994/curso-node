@@ -1,0 +1,46 @@
+<%- include("../template/head",{title:"Registro - Mascotas"}) %>
+<main class="app-content">
+  <div class="app-title">
+    <div>
+      <h1><i class="fa fa-dashboard"></i>Registro de Mascotas</h1>
+      <p>formulario mascotas</p>
+    </div>
+    <ul class="app-breadcrumb breadcrumb">
+      <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+      <li class="breadcrumb-item"><a href="#">Mascotas</a></li>
+    </ul>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title text-center">Registrar nueva mascota</h5>
+        </div>
+        <div class="card-body">
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+              <form action="">
+                <div class="form-group">
+                  <label for="">Nombre</label>
+                  <input type="text" placeholder="nombre de la mascota" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="">Descripcion</label>
+                   <textarea rows="2" class="form-control" placeholder="descripcion de la mascota"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="">Estado</label>
+                  <select name="" id="" class="custom-select">
+                    <option value="ACTIVO">Activo</option>
+                    <option value="INACTIVO">Inactivo</option>
+                  </select>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<%- include("../template/body") %>
