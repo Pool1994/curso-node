@@ -1,11 +1,20 @@
 const express = require('express');
 const app = express();
 const ejs = require('ejs');
+
 require("dotenv").config();
 
 const port = process.env.PORT;
 
-require("./src/database/database");
+const mongoose = require('mongoose');
+const user = process.env.USER;
+const password = process.env.PASSWORD;
+const database = process.env.DATABASE;
+const uri = `mongodb+srv://${user}:${password}@cluster0.xape8.mongodb.net/${database}?retryWrites=true&w=majority`;
+
+mongoose.connect(uri,{useNewUrlParser:true,useUnifiedTopology:true})
+.then(()=>console.log("base de datos conectada"))
+.catch(e=>console.log(e));
 
 // motor de plantillas
 app.set("view engine", "ejs");
